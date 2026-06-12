@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: loltracker
+
+riot:
+  api-key: ${API_KEY}
+
+logging:
+  level:
+    com.example.loltracker: debug
+    org.springframework.web.client: debug
+

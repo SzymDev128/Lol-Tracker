@@ -1,4 +1,4 @@
-package org.example.model;
+package com.example.loltracker.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
