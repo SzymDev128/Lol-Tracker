@@ -39,4 +39,5 @@ build/
 .DS_Store
 
 .env
-.roadmap-java-spring-lol-tracker
+roadmap-java-spring-lol-tracker.md
+CLAUDE.md
