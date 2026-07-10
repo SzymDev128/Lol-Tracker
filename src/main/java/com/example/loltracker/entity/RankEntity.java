@@ -15,14 +15,14 @@ public class RankEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "player_id")
-    private Player player;
-
     private String queueType;
     private String tier;
     private String rank;
     private int leaguePoints;
     private int wins;
     private int losses;
+
+    @ManyToOne
+    @JoinColumn(name = "player_id")
+    private Player player;
 }

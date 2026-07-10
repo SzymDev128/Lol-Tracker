@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -27,8 +28,8 @@ public class Player {
     private int profileIconId;
     private LocalDateTime lastUpdated;
 
-    @OneToMany(mappedBy = "player")
-    private List<RankEntity> rankEntries;
+    @OneToMany(mappedBy = "player", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<RankEntity> rankEntries =  new ArrayList<>();
 
 
 }

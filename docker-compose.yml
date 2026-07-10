@@ -6,4 +6,9 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "5432:5432"
+      - "5433:5432"
+    volumes:
+      - lol_tracker_data:/var/lib/postgresql/data
+
+volumes:
+  lol_tracker_data:
