@@ -1,6 +1,16 @@
 spring:
   application:
-    name: loltracker
+    name: lol-tracker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lol-tracker
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
 
 riot:
   api-key: ${API_KEY}
