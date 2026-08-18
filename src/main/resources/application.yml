@@ -2,7 +2,7 @@ spring:
   application:
     name: lol-tracker
   datasource:
-    url: jdbc:postgresql://localhost:5433/lol-tracker
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/lol-tracker}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
   jpa:

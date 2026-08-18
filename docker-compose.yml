@@ -10,5 +10,17 @@ services:
     volumes:
       - lol_tracker_data:/var/lib/postgresql/data
 
+  app:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      API_KEY: ${API_KEY}
+
 volumes:
   lol_tracker_data:
