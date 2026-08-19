@@ -34,3 +34,6 @@ build/
 .env
 roadmap-java-spring-lol-tracker.md
 CLAUDE.md
+
+### Claude Code ###
+.claude/settings.local.json
